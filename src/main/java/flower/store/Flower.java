@@ -1,11 +1,13 @@
 package flower.store;
 
+import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-
-
 @Setter
+@AllArgsConstructor
+@NoArgsConstructor
 public class Flower {
     @Getter
     private double sepalLength;
@@ -17,5 +19,9 @@ public class Flower {
 
     public String getColor() {
         return color.toString();
+    }
+
+    public FlowerColor getColorEnum() {
+        return this.color;
     }
 }
